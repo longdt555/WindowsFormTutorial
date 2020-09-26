@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -22,7 +23,7 @@ namespace FinanicalManagement
 
         private string connectionStr = "Data Source=DESKTOP-KS7816I\\YONG;Initial Catalog=FinancialManagement; user id=sa; password=2c3a4n56A;";
 
-        public DataTable ExecuteQuery(string query, object[] parameter = null)
+        public DataTable ExecuteQuerytoDTbl(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();
 
@@ -55,7 +56,29 @@ namespace FinanicalManagement
 
             return data;
         }
+        public DataSet ExecuteQuerytoDS(string query)
+        {
+            DataSet dataset = new DataSet();
+            using (SqlConnection connection = new SqlConnection(connectionStr))
+            {
+                connection.Open();
 
+                SqlCommand command = new SqlCommand(query, connection);
+
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+
+                try
+                {
+                    adapter.Fill(dataset);
+                    connection.Close();
+                }
+                catch (SqlException ex)
+                {
+                    System.Windows.Forms.MessageBox.Show(ex.ToString());
+                }
+                return dataset;
+            }
+        }
         public int ExecuteNonQuery(string query, object[] parameter = null)
         {
             int data = 0;

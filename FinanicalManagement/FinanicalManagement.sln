@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.30104.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanicalManagement", "FinanicalManagement\FinanicalManagement.csproj", "{57058086-5BCC-4E45-A3C1-3AB401F3D4FC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{BB054980-BE32-4644-8C21-38E8CDB7A6FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lib.Common", "Lib.Common\Lib.Common.csproj", "{76E7185D-1FE1-4894-9BC6-C8F38254CE6F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +19,16 @@ Global
 		{57058086-5BCC-4E45-A3C1-3AB401F3D4FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57058086-5BCC-4E45-A3C1-3AB401F3D4FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57058086-5BCC-4E45-A3C1-3AB401F3D4FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76E7185D-1FE1-4894-9BC6-C8F38254CE6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76E7185D-1FE1-4894-9BC6-C8F38254CE6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76E7185D-1FE1-4894-9BC6-C8F38254CE6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76E7185D-1FE1-4894-9BC6-C8F38254CE6F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{76E7185D-1FE1-4894-9BC6-C8F38254CE6F} = {BB054980-BE32-4644-8C21-38E8CDB7A6FE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C0544492-FAFD-44B6-903E-23D15B41BA37}
